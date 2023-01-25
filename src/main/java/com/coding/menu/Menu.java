@@ -24,7 +24,7 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
-            switch (choice) {
+            switch(choice) {
                 case 1:
                     crudCities();
                     break;
