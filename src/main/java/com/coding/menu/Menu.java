@@ -10,10 +10,12 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("Menu principal : ");
             System.out.println("1. Villes");
             System.out.println("2. Pays");
             System.out.println("3. Acteurs");
             System.out.println("4. Films");
+            System.out.println("5. Quitter");
 
             System.out.print("Entre ton choix : ");
 
@@ -33,7 +35,7 @@ public class Menu {
                     crudFilms();
                     break;
                 case 5:
-
+                    exit = true;
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -47,6 +49,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("Menu de la table Ville : ");
             System.out.println("1. Créer une nouvelle ville");
             System.out.println("2. Afficher les villes");
             System.out.println("3. Mettre à jour une ville");
@@ -79,6 +82,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("Menu de la table Pays : ");
             System.out.println("1. Créer une nouveau pays");
             System.out.println("2. Afficher les pays");
             System.out.println("3. Mettre à jour un pays");
@@ -114,6 +118,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("Menu de la table Acteurs : ");
             System.out.println("1. Créer un nouvel acteur");
             System.out.println("2. Afficher les acteurs");
             System.out.println("3. Mettre à jour un acteur");
@@ -146,6 +151,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("Menu de la table Films : ");
             System.out.println("1. Créer un nouveau film");
             System.out.println("2. Afficher les films");
             System.out.println("3. Mettre à jour un film");
