@@ -16,9 +16,9 @@ public class Menu {
             System.out.println("3. Acteurs");
             System.out.println("4. Films");
             System.out.println("5. Clients");
-            System.out.println("5. Adresses");
-            System.out.println("6. Staff");
-            System.out.println("7. Quitter");
+            System.out.println("6. Adresses");
+            System.out.println("7. Staff");
+            System.out.println("8. Quitter");
 
             System.out.print("Entre ton choix : ");
 
@@ -50,7 +50,7 @@ public class Menu {
                     exit = true;
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Choix non valide. Réessayez.");
             }
         }
     }
