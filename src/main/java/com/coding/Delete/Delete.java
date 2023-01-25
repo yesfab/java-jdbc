@@ -1,4 +1,4 @@
-package com.coding.actions;
+package com.coding.Delete;
 
 import java.sql.SQLException;
 import java.sql.Statement;
