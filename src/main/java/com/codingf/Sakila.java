@@ -1,6 +1,7 @@
 package com.codingf;
 import java.sql.*;
 import java.util.Scanner;
+import * ;
 
 public class Sakila {
     // JDBC driver name and database URL
