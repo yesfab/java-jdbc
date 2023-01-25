@@ -15,7 +15,10 @@ public class Menu {
             System.out.println("2. Pays");
             System.out.println("3. Acteurs");
             System.out.println("4. Films");
-            System.out.println("5. Quitter");
+            System.out.println("5. Clients");
+            System.out.println("5. Adresses");
+            System.out.println("6. Staff");
+            System.out.println("7. Quitter");
 
             System.out.print("Entre ton choix : ");
 
@@ -35,6 +38,15 @@ public class Menu {
                     crudFilms();
                     break;
                 case 5:
+                    crudCustomers();
+                    break;
+                case 6:
+                    crudAddress();
+                    break;
+                case 7:
+                    crudStaff();
+                    break;
+                case 8:
                     exit = true;
                     break;
                 default:
@@ -178,5 +190,103 @@ public class Menu {
 
     }
 
+    public static void crudCustomers() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu de la table Customers : ");
+            System.out.println("1. Créer un nouveau client");
+            System.out.println("2. Afficher les clients");
+            System.out.println("3. Mettre à jour un client");
+            System.out.println("4. Supprimer un client");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudAddress() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu de la table Adresses : ");
+            System.out.println("1. Créer une nouvelle adresse");
+            System.out.println("2. Afficher les adresses");
+            System.out.println("3. Mettre à jour une adresse");
+            System.out.println("4. Supprimer une adresse");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudStaff() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu de la table Staff : ");
+            System.out.println("1. Créer un nouveau membre du staff");
+            System.out.println("2. Afficher les membres du staff");
+            System.out.println("3. Mettre à jour un membre du staff");
+            System.out.println("4. Supprimer un membre du staff");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
 
 }
