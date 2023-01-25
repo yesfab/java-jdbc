@@ -1,7 +1,7 @@
-package com.codingf;
+package com.coding;
 import java.sql.*;
 import java.util.Scanner;
-import * ;
+
 
 public class Sakila {
     // JDBC driver name and database URL
@@ -10,7 +10,7 @@ public class Sakila {
 
     //  Database credentials
     static final String USER = "username";
-    static final String PASS = "password";
+    static final String PASS = "";
 
     public static void main(String[] args) {
         Connection conn = null;
