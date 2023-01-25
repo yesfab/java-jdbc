@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JAVAJDBC" />
-        <module name="java-jdbc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="java-jdbc" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
