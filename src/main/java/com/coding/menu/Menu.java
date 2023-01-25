@@ -78,6 +78,12 @@ public class Menu {
                 case 2:
 
                     break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
                 case 5:
                     exit = true;
                     break;
@@ -114,6 +120,9 @@ public class Menu {
                 case 3:
 
                     break;
+                case 4:
+
+                    break;
                 case 5:
                     exit = true;
                     break;
@@ -145,6 +154,12 @@ public class Menu {
 
                     break;
                 case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
 
                     break;
                 case 5:
@@ -180,6 +195,12 @@ public class Menu {
                 case 2:
 
                     break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
                 case 5:
                     exit = true;
                     break;
@@ -211,6 +232,12 @@ public class Menu {
 
                     break;
                 case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
 
                     break;
                 case 5:
@@ -246,6 +273,12 @@ public class Menu {
                 case 2:
 
                     break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
                 case 5:
                     exit = true;
                     break;
@@ -277,6 +310,12 @@ public class Menu {
 
                     break;
                 case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
 
                     break;
                 case 5:
