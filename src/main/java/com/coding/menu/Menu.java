@@ -1,10 +1,15 @@
 package com.coding.menu;
+import com.coding.modulo.*;
+import com.coding.modulo.Creer;
+import com.coding.Main;
 
+import java.sql.SQLException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Menu {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -42,7 +47,7 @@ public class Menu {
         }
     }
 
-    public static void crudCities() {
+    public static void crudCities() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -57,8 +62,17 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
+
             switch (choice) {
                 case 1:
+                    Creer creer = new Creer();
+
+                    System.out.println("Quel ville voulez vous creer ? ");
+                    String ville = action.nextLine();
+
+                    creer.City(ville, 1);
 
                     break;
                 case 2:
@@ -75,7 +89,7 @@ public class Menu {
 
     }
 
-    public static void crudCountries() {
+    public static void crudCountries() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -90,16 +104,29 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
-            switch (choice) {
-                case 1:
+            Scanner action = new Scanner(System.in);
 
+            switch (choice) {
+
+                case 1:
+                    Creer creer = new Creer();
+
+                    System.out.println("Quel pays voulez vous creer ? ");
+                    String pays = action.nextLine();
+
+                    creer.Countries(pays);
                     break;
                 case 2:
 
                     break;
                 case 3:
-
                     break;
+
+                case 4:
+                    Delete delete = new Delete();
+                    Delete.supprCountry();
+                    break;
+
                 case 5:
                     exit = true;
                     break;
