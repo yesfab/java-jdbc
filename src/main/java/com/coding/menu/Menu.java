@@ -1,6 +1,7 @@
 package com.coding.menu;
 import com.coding.modulo.*;
 import com.coding.modulo.Creer;
+import com.coding.modulo.Show;
 import com.coding.Main;
 
 import java.sql.SQLException;
@@ -122,8 +123,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowCity(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -164,8 +168,11 @@ public class Menu {
                     creer.Countries(pays);
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowCountries(Spays);
                     break;
+
                 case 3:
                     break;
 
@@ -185,7 +192,7 @@ public class Menu {
     }
 
     public static void crudActors() throws SQLException {
-        //F
+
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -214,7 +221,9 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowActor(Spays);
                     break;
                 case 5:
                     exit = true;
@@ -226,8 +235,8 @@ public class Menu {
 
     }
 
-    public static void crudFilms() {
-//f
+    public static void crudFilms() throws SQLException {
+
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -242,13 +251,16 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+
             switch (choice) {
                 case 1:
 
-                    break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowFilm(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -259,7 +271,7 @@ public class Menu {
 
     }
 
-    public static void crudAddress() {
+    public static void crudAddress() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -279,8 +291,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowAddress(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -291,7 +306,7 @@ public class Menu {
 
     }
 
-    public static void crudCategories() {
+    public static void crudCategories() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -312,8 +327,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowCategorie(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -345,8 +363,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowCustomer(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -357,7 +378,7 @@ public class Menu {
 
     }
 
-    public static void crudFilms_actor() {
+    public static void crudFilms_actor() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -378,8 +399,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowFilms_actor(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -390,7 +414,7 @@ public class Menu {
 
     }
 
-    public static void crudFilms_category() {
+    public static void crudFilms_category() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -411,8 +435,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowFilms_category(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -423,7 +450,7 @@ public class Menu {
 
     }
 
-    public static void crudInventory() {
+    public static void crudInventory() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -443,8 +470,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowInventory(Spays);
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -455,7 +485,7 @@ public class Menu {
 
     }
 
-    public static void crudStaff() {
+    public static void crudStaff() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -478,8 +508,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowStaff(Spays);
                     break;
+
                 case 3:
 
                     break;
@@ -496,7 +529,7 @@ public class Menu {
 
     }
 
-    public static void crudLanguage() {
+    public static void crudLanguage() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -518,8 +551,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowLanguage(Spays);
                     break;
+
                 case 3:
 
                     break;
@@ -536,7 +572,7 @@ public class Menu {
 
     }
 
-    public static void crudPayment() {
+    public static void crudPayment() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -558,8 +594,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowPayment(Spays);
                     break;
+
                 case 3:
 
                     break;
@@ -576,7 +615,7 @@ public class Menu {
 
     }
 
-    public static void crudRental() {
+    public static void crudRental() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -598,8 +637,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowRental(Spays);
                     break;
+
                 case 3:
 
                     break;
@@ -616,7 +658,7 @@ public class Menu {
 
     }
 
-    public static void crudStore() {
+    public static void crudStore() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -638,8 +680,11 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowStore(Spays);
                     break;
+
                 case 3:
 
                     break;
