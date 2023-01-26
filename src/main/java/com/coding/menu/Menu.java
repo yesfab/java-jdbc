@@ -137,7 +137,7 @@ public class Menu {
 
     }
 
-    public static void crudActors() {
+    public static void crudActors() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -152,8 +152,17 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+
+                    Creer creer = new Creer();
+
+                    System.out.println("Quel Acteur voulez vous creer ? ");
+                    String actor = action.nextLine();
+
+                    creer.Actor(actor);
 
                     break;
                 case 2:

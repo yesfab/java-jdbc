@@ -36,9 +36,6 @@ public class Creer {
         }
     }
 
-
-
-
     public static void Countries(String country) throws SQLException{
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -62,5 +59,33 @@ public class Creer {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void Actor(String actor) throws SQLException{
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            //Créer l'objet statement
+            Statement stmt = conn.createStatement();
+
+            //Requete d'insertion
+
+            String sql = "INSERT INTO actor (firt_name, last_name)" +
+                    "VALUES ('" + actor.split(" ")[0] + "', '" + actor.split(" ")[1] + "')";
+            stmt.executeUpdate(sql);
+            System.out.println("Acteur crée");
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void Film(String film) throws SQLException{
+
     }
 }
