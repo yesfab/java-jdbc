@@ -117,7 +117,9 @@ public class Menu {
                     creer.Countries(pays);
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Spays = action.nextLine();
+                    show.ShowCountries(Spays);
                     break;
                 case 3:
                     break;
