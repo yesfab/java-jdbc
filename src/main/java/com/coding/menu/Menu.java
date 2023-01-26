@@ -76,7 +76,9 @@ public class Menu {
 
                     break;
                 case 2:
-
+                    Show show = new Show();
+                    String Scity = action.nextLine();
+                    show.ShowCity(Scity);
                     break;
                 case 5:
                     exit = true;
