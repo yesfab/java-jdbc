@@ -1,11 +1,15 @@
 package com.coding.menu;
+import com.coding.modulo.*;
+import com.coding.modulo.Creer;
+import com.coding.Main;
 
-
+import java.sql.SQLException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Menu {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -26,13 +30,12 @@ public class Menu {
             System.out.println("13. Location");
             System.out.println("14. Magasin");
             System.out.println("15. Inventaire");
-            System.out.println("16. Quitter");
 
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
 
-            switch(choice) {
+            switch (choice) {
                 case 1:
                     crudCities();
                     break;
@@ -80,19 +83,22 @@ public class Menu {
                 case 16:
                     exit = true;
                     break;
+
+                case 17:
+                    break;
                 default:
-                    System.out.println("Choix non valide. Réessayez.");
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }
 
-    public static void crudCities() {
+    public static void crudCities() throws SQLException {
+        //f
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Ville : ");
             System.out.println("1. Créer une nouvelle ville");
             System.out.println("2. Afficher les villes");
             System.out.println("3. Mettre à jour une ville");
@@ -101,6 +107,9 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+
+            Scanner action = new Scanner(System.in);
+
 
             switch (choice) {
                 case 1:
@@ -115,29 +124,24 @@ public class Menu {
                 case 2:
 
                     break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
                 case 5:
                     exit = true;
                     break;
                 default:
                     System.out.println("Choix non valide. Réessayez.");
             }
+
         }
 
     }
 
-    public static void crudCountries() {
+    public static void crudCountries() throws SQLException {
+        //f
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Pays : ");
             System.out.println("1. Créer une nouveau pays");
             System.out.println("2. Afficher les pays");
             System.out.println("3. Mettre à jour un pays");
@@ -147,25 +151,29 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
+
                 case 1:
                     Creer creer = new Creer();
 
                     System.out.println("Quel pays voulez vous creer ? ");
                     String pays = action.nextLine();
 
-                    creer.Country(pays);
-
+                    creer.Countries(pays);
                     break;
                 case 2:
 
                     break;
                 case 3:
-
                     break;
+
                 case 4:
-
+                    Delete Delete = new Delete();
+                    Delete.supprCountry();
                     break;
+
                 case 5:
                     exit = true;
                     break;
@@ -176,13 +184,13 @@ public class Menu {
 
     }
 
-    public static void crudActors() {
+    public static void crudActors() throws SQLException {
+        //F
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Acteurs : ");
             System.out.println("1. Créer un nouvel acteur");
             System.out.println("2. Afficher les acteurs");
             System.out.println("3. Mettre à jour un acteur");
@@ -192,23 +200,20 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+
                     Creer creer = new Creer();
 
-                    System.out.println("Quel acteur voulez vous creer ? ");
+                    System.out.println("Quel Acteur voulez vous creer ? ");
                     String actor = action.nextLine();
 
                     creer.Actor(actor);
 
                     break;
                 case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
 
                     break;
                 case 5:
@@ -222,7 +227,7 @@ public class Menu {
     }
 
     public static void crudFilms() {
-
+//f
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -239,156 +244,9 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quel film voulez vous creer ? ");
-                    String film = action.nextLine();
-
-                    creer.Film(film);
 
                     break;
                 case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Choix non valide. Réessayez.");
-            }
-        }
-
-    }
-
-    public static void crudFilms_actor() {
-
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-
-        while (!exit) {
-            System.out.println("Menu de la table Films : ");
-            System.out.println("1. Créer un nouveau acteur de film");
-            System.out.println("2. Afficher les acteurs de film");
-            System.out.println("3. Mettre à jour un acteur de film");
-            System.out.println("4. Supprimer un acteur de film");
-            System.out.println("5. Retour");
-            System.out.print("Entre ton choix : ");
-
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quel acteur de film voulez vous creer ? ");
-                    String film_actor = action.nextLine();
-
-                    creer.Films_actor(film_actor);
-
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Choix non valide. Réessayez.");
-            }
-        }
-
-    }
-
-    public static void crudFilms_category() {
-
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-
-        while (!exit) {
-            System.out.println("Menu de la table Films : ");
-            System.out.println("1. Créer une nouvelle catégorie de film");
-            System.out.println("2. Afficher les catégories de film");
-            System.out.println("3. Mettre à jour une catégorie de film");
-            System.out.println("4. Supprimer une catégorie de film");
-            System.out.println("5. Retour");
-            System.out.print("Entre ton choix : ");
-
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quel catégorie de film voulez vous creer ? ");
-                    String film_category = action.nextLine();
-
-                    creer.Film_category(film_category);
-
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Choix non valide. Réessayez.");
-            }
-        }
-
-    }
-
-    public static void crudCustomers() {
-
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-
-        while (!exit) {
-            System.out.println("Menu de la table Customers : ");
-            System.out.println("1. Créer un nouveau client");
-            System.out.println("2. Afficher les clients");
-            System.out.println("3. Mettre à jour un client");
-            System.out.println("4. Supprimer un client");
-            System.out.println("5. Retour");
-            System.out.print("Entre ton choix : ");
-
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quel client voulez vous creer ? ");
-                    String customer = action.nextLine();
-
-                    creer.Customer(customer);
-
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
 
                     break;
                 case 5:
@@ -407,7 +265,6 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Adresses : ");
             System.out.println("1. Créer une nouvelle adresse");
             System.out.println("2. Afficher les adresses");
             System.out.println("3. Mettre à jour une adresse");
@@ -419,66 +276,9 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quelle adresse voulez vous creer ? ");
-                    String address = action.nextLine();
-
-                    creer.Address(address);
 
                     break;
                 case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Choix non valide. Réessayez.");
-            }
-        }
-
-    }
-
-    public static void crudStaff() {
-
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-
-        while (!exit) {
-            System.out.println("Menu de la table Staff : ");
-            System.out.println("1. Créer un nouveau membre du staff");
-            System.out.println("2. Afficher les membres du staff");
-            System.out.println("3. Mettre à jour un membre du staff");
-            System.out.println("4. Supprimer un membre du staff");
-            System.out.println("5. Retour");
-            System.out.print("Entre ton choix : ");
-
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quel membre du staff voulez vous creer ? ");
-                    String staff = action.nextLine();
-
-                    creer.Staff(staff);
-
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
 
                     break;
                 case 5:
@@ -497,11 +297,11 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Films : ");
-            System.out.println("1. Créer une nouvelle catégorie");
-            System.out.println("2. Afficher les catégories");
-            System.out.println("3. Mettre à jour une catégorie");
-            System.out.println("4. Supprimer une catégorie");
+            System.out.println("Menu des categories");
+            System.out.println("1. Créer une nouvelle categorie");
+            System.out.println("2. Afficher les categories");
+            System.out.println("3. Mettre à jour une categorie");
+            System.out.println("4. Supprimer une categorie");
             System.out.println("5. Retour");
             System.out.print("Entre ton choix : ");
 
@@ -509,12 +309,172 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
 
-                    System.out.println("Quelle catégorie voulez vous creer ? ");
-                    String category = action.nextLine();
+                    break;
+                case 2:
 
-                    creer.Category(category);
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudCustomers() throws SQLException {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu de la table Customers : ");
+            System.out.println("1. Créer un nouveau client");
+            System.out.println("2. Afficher les clients");
+            System.out.println("3. Mettre à jour un client");
+            System.out.println("4. Supprimer un client");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudFilms_actor() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu de la table acteur de Film : ");
+            System.out.println("1. Créer un nouveau acteur de film");
+            System.out.println("2. Afficher les acteurs de film");
+            System.out.println("3. Mettre à jour un acteur de film");
+            System.out.println("4. Supprimer un acteur de film");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudFilms_category() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu de la table categorie de Films : ");
+            System.out.println("1. Créer une nouvelle categorie de film");
+            System.out.println("2. Afficher les categories de film");
+            System.out.println("3. Mettre à jour une categorie de film");
+            System.out.println("4. Supprimer une categorie de film");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudInventory() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("1. Créer un nouvel inventaire");
+            System.out.println("2. Afficher les inventaires");
+            System.out.println("3. Mettre à jour un inventaire");
+            System.out.println("4. Supprimer un inventaire");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 5:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Choix non valide. Réessayez.");
+            }
+        }
+
+    }
+
+    public static void crudStaff() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+
+            System.out.println("Menu de la table Staff : ");
+            System.out.println("1. Créer un nouveau membre du staff");
+            System.out.println("2. Afficher les membres du staff");
+            System.out.println("3. Mettre à jour un membre du staff");
+            System.out.println("4. Supprimer un membre du staff");
+            System.out.println("5. Retour");
+            System.out.print("Entre ton choix : ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+
 
                     break;
                 case 2:
@@ -542,7 +502,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Films : ");
+            System.out.println("Menu de la table langage : ");
             System.out.println("1. Créer un nouveau langage");
             System.out.println("2. Afficher les langages");
             System.out.println("3. Mettre à jour un langage");
@@ -554,12 +514,7 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
 
-                    System.out.println("Quel langage voulez vous creer ? ");
-                    String language = action.nextLine();
-
-                    creer.Language(language);
 
                     break;
                 case 2:
@@ -587,7 +542,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Films : ");
+            System.out.println("Menu de la table paiement : ");
             System.out.println("1. Créer un nouveau paiement");
             System.out.println("2. Afficher les paiements");
             System.out.println("3. Mettre à jour un paiement");
@@ -599,12 +554,7 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
 
-                    System.out.println("Quel paiement voulez vous creer ? ");
-                    String payment = action.nextLine();
-
-                    creer.Payment(payment);
 
                     break;
                 case 2:
@@ -632,7 +582,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Films : ");
+            System.out.println("Menu de la table location : ");
             System.out.println("1. Créer une nouvelle location");
             System.out.println("2. Afficher les locations");
             System.out.println("3. Mettre à jour une location");
@@ -644,12 +594,7 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
 
-                    System.out.println("Quelle location voulez vous creer ? ");
-                    String rental = action.nextLine();
-
-                    creer.Rental(rental);
 
                     break;
                 case 2:
@@ -677,7 +622,7 @@ public class Menu {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Menu de la table Films : ");
+            System.out.println("Menu de la table magasin : ");
             System.out.println("1. Créer un nouveau magasin");
             System.out.println("2. Afficher les magasins");
             System.out.println("3. Mettre à jour un magasin");
@@ -689,12 +634,7 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Creer creer = new Creer();
 
-                    System.out.println("Quel magasin voulez vous creer ? ");
-                    String store = action.nextLine();
-
-                    creer.Store(store);
 
                     break;
                 case 2:
@@ -716,48 +656,6 @@ public class Menu {
 
     }
 
-    public static void crudInventory() {
 
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-
-        while (!exit) {
-            System.out.println("Menu de la table Films : ");
-            System.out.println("1. Créer un nouveau inventaire");
-            System.out.println("2. Afficher les inventaires");
-            System.out.println("3. Mettre à jour un inventaire");
-            System.out.println("4. Supprimer un inventaire");
-            System.out.println("5. Retour");
-            System.out.print("Entre ton choix : ");
-
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Creer creer = new Creer();
-
-                    System.out.println("Quel inventaire voulez vous creer ? ");
-                    String inventory = action.nextLine();
-
-                    creer.Inventory(inventory);
-
-                    break;
-                case 2:
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Choix non valide. Réessayez.");
-            }
-        }
-
-    }
 
 }
