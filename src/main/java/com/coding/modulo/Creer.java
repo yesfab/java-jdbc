@@ -2,12 +2,11 @@ package com.coding.modulo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.sql.Statement;
 public class Creer {
 
 
-    public static void City(String city, int country_id) throws SQLException{
+    public void City(String city, int country_id){
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -36,7 +35,7 @@ public class Creer {
         }
     }
 
-    public static void Countries(String country) throws SQLException{
+    public static void Countries(String country){
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -61,7 +60,7 @@ public class Creer {
         }
     }
 
-    public static void Actor(String actor_firstname, String actor_lastname) throws SQLException{
+    public static void Actor(String actor_firstname, String actor_lastname){
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -85,7 +84,7 @@ public class Creer {
         }
     }
 
-    public static void Film(String film_title, String film_description, String film_realease_year, String film_rental_duration, String film_length, String film_replacement_cost, String film_rating, String film_special_features) throws SQLException{
+    public static void Film(String film_title, String film_description, String film_realease_year, String film_rental_duration, String film_length, String film_replacement_cost, String film_rating, String film_special_features){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -110,7 +109,7 @@ public class Creer {
         }
     }
 
-    public static void Film_actor(String film_actor_id, String film_film_id) throws SQLException{
+    public static void Film_actor(String film_actor_id, String film_film_id){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -135,7 +134,7 @@ public class Creer {
         }
     }
 
-    public static void Film_category(String film_id_category, String film_category_id) throws SQLException{
+    public static void Film_category(String film_id_category, String film_category_id){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -160,7 +159,7 @@ public class Creer {
         }
     }
 
-    public static void Customers(String customer_firstname, String customer_lastname, String customer_email, String customer_address_id) throws SQLException{
+    public static void Customers(String customer_firstname, String customer_lastname, String customer_email, String customer_address_id){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -185,7 +184,7 @@ public class Creer {
         }
     }
 
-    public static void Address(String address, String address2, String district, String city_id, String postal_code, String phone) throws SQLException{
+    public static void Address(String address, String address2, String district, String city_id, String postal_code, String phone){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -210,7 +209,7 @@ public class Creer {
         }
     }
 
-    public static void Staff(String staff_firstname, String staff_lastname, String staff_address_id, String staff_email, String staff_store_id, String staff_username, String staff_password) throws SQLException{
+    public static void Staff(String staff_firstname, String staff_lastname, String staff_address_id, String staff_email, String staff_store_id, String staff_username, String staff_password){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -235,7 +234,7 @@ public class Creer {
         }
     }
 
-    public static void Categories(String category_name) throws SQLException{
+    public static void Categories(String category_name){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -260,7 +259,7 @@ public class Creer {
         }
     }
 
-    public static void Language(String language) throws SQLException{
+    public static void Language(String language_name){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -274,8 +273,8 @@ public class Creer {
 
             //Requete d'insertion
 
-            String sql = "INSERT INTO language (language_id, name)" +
-                    "VALUES ('" + language.split(" ")[0] + "', '" + language.split(" ")[1] + "')";
+            String sql = "INSERT INTO language (name)" +
+                    "VALUES ('" + language_name.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
             System.out.println("Categorie créée");
 
@@ -285,7 +284,7 @@ public class Creer {
         }
     }
 
-    public static void Payment(String payment) throws SQLException{
+    public static void Payment(String payment_customer_id, String payment_staff_id, String payment_rental_id, String payment_amount, String payment_date){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -300,7 +299,7 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO payment (payment_id, customer_id, staff_id, rental_id, amount, payment_date)" +
-                    "VALUES ('" + payment.split(" ")[0] + "', '" + payment.split(" ")[1] + "', '" + payment.split(" ")[2] + "', '" + payment.split(" ")[3] + "', '" + payment.split(" ")[4] + "', '" + payment.split(" ")[5] +  "')";
+                    "VALUES ('" + payment_customer_id.split(" ")[0] + "', '" + payment_staff_id.split(" ")[1] + "', '" + payment_rental_id.split(" ")[2] + "', '" + payment_amount.split(" ")[3] + "', '" + payment_date.split(" ")[4] + "')";
             stmt.executeUpdate(sql);
             System.out.println("Paiment créé");
 
@@ -310,7 +309,7 @@ public class Creer {
         }
     }
 
-    public static void Rental(String rental) throws SQLException{
+    public static void Rental(String rental_date, String rental_inventory_id, String rental_customer_id, String rental_return_date, String rental_staff_id){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -325,7 +324,7 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO rental (rental_date, inventory_id, customer_id, return_date, staff_id)" +
-                    "VALUES ('" + rental.split(" ")[0] + "', '" + rental.split(" ")[1] + "', '" + rental.split(" ")[2] + "', '" + rental.split(" ")[3] + "')";
+                    "VALUES ('" + rental_date.split(" ")[0] + "', '" + rental_inventory_id.split(" ")[1] + "', '" + rental_customer_id.split(" ")[2] + "', '" + rental_return_date.split(" ")[3] + "', '" + rental_staff_id.split(" ")[4] + "')";
             stmt.executeUpdate(sql);
             System.out.println("Location créée");
 
@@ -335,7 +334,7 @@ public class Creer {
         }
     }
 
-    public static void Store(String store) throws SQLException{
+    public static void Store(String store_manager_staff_id, String store_address_id){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -350,7 +349,7 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO store (manager_staff_id, address_id)" +
-                    "VALUES ('" + store.split(" ")[0] + "', '" + store.split(" ")[1] + "')";
+                    "VALUES ('" + store_manager_staff_id.split(" ")[0] + "', '" + store_address_id.split(" ")[1] + "')";
             stmt.executeUpdate(sql);
             System.out.println("Magasin créé");
 
@@ -360,7 +359,7 @@ public class Creer {
         }
     }
 
-    public static void Inventory(String inventory) throws SQLException{
+    public static void Inventory(String inventory_film_id, String inventory_store_id){
 
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -375,7 +374,7 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO inventory (film_id, store_id)" +
-                    "VALUES ('" + inventory.split(" ")[0] + "', '" + inventory.split(" ")[1] + "')";
+                    "VALUES ('" + inventory_film_id.split(" ")[0] + "', '" + inventory_store_id.split(" ")[1] + "')";
             stmt.executeUpdate(sql);
             System.out.println("Inventaire créé");
 

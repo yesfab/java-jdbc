@@ -1,10 +1,8 @@
 package com.coding.menu;
 import com.coding.modulo.*;
 import com.coding.modulo.Creer;
-import com.coding.Main;
 
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Menu {
@@ -109,7 +107,6 @@ public class Menu {
             int choice = scanner.nextInt();
 
             Scanner action = new Scanner(System.in);
-
 
             switch (choice) {
                 case 1:
@@ -516,7 +513,7 @@ public class Menu {
 
     }
 
-    public static void crudInventory() {
+    public static void crudInventory() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -531,8 +528,18 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+                    Creer creer = new Creer();
+
+                    System.out.println("Entrez l'id du film dans l'inventaire : ");
+                    String inventory_film_id = action.nextLine();
+                    System.out.println("Entrez l'id du magasin où se trouve l'inventaire : ");
+                    String inventory_store_id = action.nextLine();
+
+                    creer.Inventory(inventory_film_id, inventory_store_id);
 
                     break;
                 case 2:
@@ -609,7 +616,7 @@ public class Menu {
 
     }
 
-    public static void crudLanguage() {
+    public static void crudLanguage() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -625,9 +632,16 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+                    Creer creer = new Creer();
 
+                    System.out.println("Entrez le nouveau langage : ");
+                    String language_name = action.nextLine();
+
+                    creer.Language(language_name);
 
                     break;
                 case 2:
@@ -649,7 +663,7 @@ public class Menu {
 
     }
 
-    public static void crudPayment() {
+    public static void crudPayment() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -665,9 +679,24 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+                    Creer creer = new Creer();
 
+                    System.out.println("Entrez l'id du client du paiement' : ");
+                    String payment_customer_id = action.nextLine();
+                    System.out.println("Entrez l'id du staff qui a géré le paiement : ");
+                    String payment_staff_id = action.nextLine();
+                    System.out.println("Entrez l'id de la location correspondant au paiement : ");
+                    String payment_rental_id = action.nextLine();
+                    System.out.println("Entrez le montant du paiement : ");
+                    String payment_amount = action.nextLine();
+                    System.out.println("Entrez la date du paiement : ");
+                    String payment_date = action.nextLine();
+
+                    creer.Payment(payment_customer_id, payment_staff_id, payment_rental_id, payment_amount, payment_date);
 
                     break;
                 case 2:
@@ -689,7 +718,7 @@ public class Menu {
 
     }
 
-    public static void crudRental() {
+    public static void crudRental() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -705,9 +734,24 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+                    Creer creer = new Creer();
 
+                    System.out.println("Entrez la date de la location : ");
+                    String rental_date = action.nextLine();
+                    System.out.println("Entrez l'id de l'inventaire de la location : ");
+                    String rental_inventory_id = action.nextLine();
+                    System.out.println("Entrez l'id du client correspondant à la location : ");
+                    String rental_customer_id = action.nextLine();
+                    System.out.println("Entrez la date de retour de la location : ");
+                    String rental_return_date = action.nextLine();
+                    System.out.println("Entrez l'id du staff qui a géré la location : ");
+                    String rental_staff_id = action.nextLine();
+
+                    creer.Rental(rental_date, rental_inventory_id, rental_customer_id, rental_return_date, rental_staff_id);
 
                     break;
                 case 2:
@@ -729,7 +773,7 @@ public class Menu {
 
     }
 
-    public static void crudStore() {
+    public static void crudStore() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -745,9 +789,18 @@ public class Menu {
 
             int choice = scanner.nextInt();
 
+            Scanner action = new Scanner(System.in);
+
             switch (choice) {
                 case 1:
+                    Creer creer = new Creer();
 
+                    System.out.println("Entrez l'id du manager du staff du magasin : ");
+                    String store_manager_staff_id = action.nextLine();
+                    System.out.println("Entrez l'id de l'adresse du magasin : ");
+                    String store_address_id = action.nextLine();
+
+                    creer.Store(store_manager_staff_id, store_address_id);
 
                     break;
                 case 2:
