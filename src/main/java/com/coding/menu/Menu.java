@@ -235,6 +235,7 @@ public class Menu {
 
     }
 
+
     public static void crudFilms() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
@@ -250,6 +251,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
 
             switch (choice) {
@@ -270,13 +272,13 @@ public class Menu {
         }
 
     }
-
     public static void crudAddress() throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("Menu de la table des adresse : ");
             System.out.println("1. Créer une nouvelle adresse");
             System.out.println("2. Afficher les adresses");
             System.out.println("3. Mettre à jour une adresse");
@@ -285,13 +287,15 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
+
 
             switch (choice) {
                 case 1:
 
-                    break;
                 case 2:
                     Show show = new Show();
+
                     String Spays = action.nextLine();
                     show.ShowAddress(Spays);
                     break;
@@ -305,6 +309,8 @@ public class Menu {
         }
 
     }
+
+
 
     public static void crudCategories() throws SQLException {
 
@@ -321,6 +327,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -357,6 +364,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -393,6 +401,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -429,6 +438,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -464,6 +474,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -501,6 +512,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -544,6 +556,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -587,6 +600,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -630,6 +644,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
@@ -673,6 +688,7 @@ public class Menu {
             System.out.print("Entre ton choix : ");
 
             int choice = scanner.nextInt();
+            Scanner action = new Scanner(System.in);
 
             switch (choice) {
                 case 1:
