@@ -32,7 +32,6 @@ public class Show {
         }
     }
 
-
     public static void ShowCountries(String country) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";

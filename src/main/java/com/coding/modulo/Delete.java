@@ -21,8 +21,8 @@ public class Delete {
             Statement stmt = conn.createStatement();
 
             //Requete d'insertion
-            String sql = "DELETE FROM country " +
-                    " WHERE ";
+            String sql = "DELETE FROM country " + " WHERE ";
+
             stmt.executeUpdate(sql);
             System.out.println("Pays supprimé");
 
