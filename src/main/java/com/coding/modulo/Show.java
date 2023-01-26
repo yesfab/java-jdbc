@@ -72,12 +72,12 @@ public class Show {
 
             //Requete d'insertion
 
-            ResultSet acteur= stmt.executeQuery("SELECT * FROM actor");
-            ResultSetMetaData resultMeta = acteur.getMetaData();
+            ResultSet acteur= stmt.executeQuery("SELECT first_name, last_name FROM actor");
+
             while(acteur.next()){
-                for(int i = 1; i <= resultMeta.getColumnCount(); i++) {
-                    System.out.println("acteur: "+ acteur.getObject(i).toString());
-                }
+                String firstName = acteur.getString("first_name");
+                String lastName = acteur.getString("last_name");
+                System.out.println("acteur:"+firstName + " " + lastName);
             }
 
 
@@ -129,11 +129,10 @@ public class Show {
             //Requete d'insertion
 
             ResultSet films= stmt.executeQuery("SELECT title FROM film");
-            ResultSetMetaData resultMeta = films.getMetaData();
+
             while(films.next()){
-                for(int i = 1; i <= resultMeta.getColumnCount(); i++) {
-                    System.out.println("film: "+ films.getObject(i).toString());
-                }
+                String title = films.getString("title");
+                System.out.println("film:"+title );
             }
 
 
@@ -184,12 +183,13 @@ public class Show {
 
             //Requete d'insertion
 
-            ResultSet client= stmt.executeQuery("SELECT * FROM customer");
-            ResultSetMetaData resultMeta = client.getMetaData();
+            ResultSet client= stmt.executeQuery("SELECT first_name, last_name, email FROM customer");
+
             while(client.next()){
-                for(int i = 1; i <= resultMeta.getColumnCount(); i++) {
-                    System.out.println("client: "+ client.getObject(i).toString());
-                }
+                String firstName = client.getString("first_name");
+                String lastName = client.getString("last_name");
+                String email = client.getString("email");
+                System.out.println("client :"+firstName + " " + lastName+ ", email:"+ email);
             }
 
 
