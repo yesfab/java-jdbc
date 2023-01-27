@@ -36,10 +36,10 @@ public class Update {
 
             String sql = "UPDATE country SET country = " + country.split(" ")[0] + " WHERE country_id = " + up_city_country;
 
-
-            System.out.println(green + "La modification a été effectuée" + reset);
             stmt.executeUpdate(sql);
-            System.out.println(green + "Pays créé" + reset);
+            System.out.println(green + "La modification a été effectuée" + reset);
+
+
 
 
             conn.close();
