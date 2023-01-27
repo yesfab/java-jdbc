@@ -203,8 +203,11 @@ public class Creer {
 
             //Requete d'insertion
 
-            String sql = "INSERT INTO address (address, address2, district, city_id, postal_code, phone)" +
-                    "VALUES ('" + address.split(" ")[0] + "', '" + address2.split(" ")[1] + "', '" + district.split(" ")[2] + "', '" + city_id.split(" ")[3] + "', '" + postal_code.split(" ")[4] + phone.split(" ")[5] + "')";
+            //String sql = "INSERT INTO address (address, address2, district, city_id, postal_code, phone)" +
+                    //"VALUES ('" + address.split(" ")[0] + "', '" + address2.split(" ")[1] + "', '" + district.split(" ")[2] + "', '" + city_id.split(" ")[3] + "', '" + postal_code.split(" ")[4] + phone.split(" ")[5] + "')";
+
+            String sql = String.format("INSERT INTO address (address, address2, district, city_id, postal_code, phone) values(\"%s\", %d)",address, address2, district, city_id, postal_code, phone);
+
             stmt.executeUpdate(sql);
             System.out.println(green + "Adresse créée" + reset);
 
