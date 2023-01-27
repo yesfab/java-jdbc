@@ -357,7 +357,7 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO store (manager_staff_id, address_id)" +
-                    "VALUES ('" + store_manager_staff_id.split(" ")[0] + "', '" + store_address_id.split(" ")[1] + "')";
+                    "VALUES ('" + store_manager_staff_id.split(" ")[0] + "', '" + store_address_id.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
             System.out.println(green + "Magasin créé" + reset);
 
@@ -382,7 +382,7 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO inventory (film_id, store_id)" +
-                    "VALUES ('" + inventory_film_id.split(" ")[0] + "', '" + inventory_store_id.split(" ")[1] + "')";
+                    "VALUES ('" + inventory_film_id.split(" ")[0] + "', '" + inventory_store_id.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
             System.out.println(green + "Inventaire créé" + reset);
 

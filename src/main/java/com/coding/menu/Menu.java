@@ -5,12 +5,14 @@ import com.coding.modulo.Show;
 import com.coding.Main;
 
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Menu {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ParseException {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -77,6 +79,7 @@ public class Menu {
                     break;
                 case 13:
                     crudRental();
+                    break;
                 case 14:
                     crudStore();
                     break;
@@ -131,6 +134,12 @@ public class Menu {
                     String Spays = action.nextLine();
                     show.ShowCity(Spays);
                     break;
+                case 3:
+                    Update update = new Update();
+                    Update.UpdateCities(update);
+
+                    break;
+
 
                 case 5:
                     exit = true;
@@ -238,6 +247,12 @@ public class Menu {
                     String Spays = action.nextLine();
                     show.ShowActor(Spays);
                     break;
+                case 3:
+                    Update update = new Update();
+                    Update.UpdateActor(update);
+
+                    break;
+
                 case 5:
                     exit = true;
                     break;
@@ -398,6 +413,12 @@ public class Menu {
                     String Spays = action.nextLine();
                     show.ShowCategorie(Spays);
                     break;
+                case 3:
+                    Update update = new Update();
+                    Update.UpdateCategory(update);
+
+                    break;
+
 
                 case 5:
                     exit = true;
@@ -696,6 +717,8 @@ public class Menu {
                     break;
 
                 case 3:
+                    Update update = new Update();
+                    Update.UpdateLanguage(update);
 
                     break;
                 case 4:
@@ -711,7 +734,7 @@ public class Menu {
 
     }
 
-    public static void crudPayment() throws SQLException {
+    public static void crudPayment() throws SQLException, ParseException {
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -733,6 +756,8 @@ public class Menu {
                 case 1:
                     Creer creer = new Creer();
 
+                    SimpleDateFormat date = new SimpleDateFormat(("dd/MM/yyyy"));
+
                     System.out.println("Entrez l'id du client du paiement' : ");
                     String payment_customer_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du staff qui a géré le paiement : ");
@@ -742,9 +767,10 @@ public class Menu {
                     System.out.println("Entrez le montant du paiement : ");
                     String payment_amount = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez la date du paiement : ");
-                    String payment_date = String.valueOf(Integer.parseInt(action.nextLine()));
+                    String date_payment = action.nextLine();
+                    Date payment_date = date.parse(date_payment);
 
-                    creer.Payment(payment_customer_id, payment_staff_id, payment_rental_id, payment_amount, payment_date);
+                    creer.Payment(payment_customer_id, payment_staff_id, payment_rental_id, payment_amount, String.valueOf(payment_date));
 
 
                     break;
