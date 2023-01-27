@@ -2,7 +2,6 @@ package com.coding.menu;
 import com.coding.modulo.*;
 import com.coding.modulo.Creer;
 import com.coding.modulo.Show;
-import com.coding.Main;
 
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -131,13 +130,17 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowCity(Spays);
+                    show.ShowCity();
                     break;
                 case 3:
                     Update update = new Update();
                     Update.UpdateCities(update);
 
+                    break;
+
+                case 4:
+                    Delete delete = new Delete();
+                    Delete.supprCities(delete);
                     break;
 
 
@@ -184,8 +187,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowCountries(Spays);
+                    show.ShowCountries();
                     break;
 
                 case 3:
@@ -195,8 +197,8 @@ public class Menu {
                     break;
 
                 case 4:
-                    Delete Delete = new Delete();
-                    Delete.supprCountry();
+                    Delete delete = new Delete();
+                    Delete.supprCountry(delete);
                     break;
 
                 case 5:
@@ -244,8 +246,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowActor(Spays);
+                    show.ShowActor();
                     break;
                 case 3:
                     Update update = new Update();
@@ -310,8 +311,8 @@ public class Menu {
 
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowFilm(Spays);
+
+                    show.ShowFilm();
                     break;
 
                 case 5:
@@ -364,8 +365,7 @@ public class Menu {
                 case 2:
                     Show show = new Show();
 
-                    String Spays = action.nextLine();
-                    show.ShowAddress(Spays);
+                    show.ShowAddress();
                     break;
 
                 case 5:
@@ -410,8 +410,8 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowCategorie(Spays);
+
+                    show.ShowCategorie();
                     break;
                 case 3:
                     Update update = new Update();
@@ -466,8 +466,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowCustomer(Spays);
+                    show.ShowCustomer();
                     break;
 
                 case 5:
@@ -512,8 +511,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowFilms_actor(Spays);
+                    show.ShowFilms_actor();
                     break;
 
                 case 5:
@@ -558,8 +556,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowFilms_category(Spays);
+                    show.ShowFilms_category();
                     break;
 
                 case 5:
@@ -603,8 +600,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowInventory(Spays);
+                    show.ShowInventory();
                     break;
 
                 case 5:
@@ -660,8 +656,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowStaff(Spays);
+                    show.ShowStaff();
                     break;
 
                 case 3:
@@ -712,8 +707,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowLanguage(Spays);
+                    show.ShowLanguage();
                     break;
 
                 case 3:
@@ -776,8 +770,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowPayment(Spays);
+                    show.ShowPayment();
                     break;
 
                 case 3:
@@ -835,8 +828,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowRental(Spays);
+                    show.ShowRental();
                     break;
 
                 case 3:
@@ -890,8 +882,7 @@ public class Menu {
                     break;
                 case 2:
                     Show show = new Show();
-                    String Spays = action.nextLine();
-                    show.ShowStore(Spays);
+                    show.ShowStore();
                     break;
 
                 case 3:

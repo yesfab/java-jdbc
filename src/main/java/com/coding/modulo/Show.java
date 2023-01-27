@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Show {
 
-    public static void ShowCountries(String country) throws SQLException {
+    public static void ShowCountries() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -33,7 +33,7 @@ public class Show {
         }
     }
 
-    public static void ShowCity(String city) throws SQLException {
+    public static void ShowCity() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -61,7 +61,7 @@ public class Show {
             e.printStackTrace();
         }
     }
-    public static void ShowActor(String actor) throws SQLException {
+    public static void ShowActor() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -90,7 +90,7 @@ public class Show {
         }
     }
 
-    public static void ShowAddress(String address) throws SQLException {
+    public static void ShowAddress() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -122,7 +122,7 @@ public class Show {
         }
     }
 
-    public static void ShowFilm(String film) throws SQLException {
+    public static void ShowFilm() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -150,7 +150,7 @@ public class Show {
         }
     }
 
-    public static void ShowCategorie(String categorie) throws SQLException {
+    public static void ShowCategorie() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -179,7 +179,7 @@ public class Show {
         }
     }
 
-    public static void ShowCustomer(String customer) throws SQLException {
+    public static void ShowCustomer() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -210,7 +210,7 @@ public class Show {
         }
     }
 
-    public static void ShowFilms_actor(String Films_actor) throws SQLException {
+    public static void ShowFilms_actor() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -239,7 +239,7 @@ public class Show {
         }
     }
 
-    public static void ShowFilms_category(String Films_category) throws SQLException {
+    public static void ShowFilms_category() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -268,7 +268,7 @@ public class Show {
         }
     }
 
-    public static void ShowInventory(String inventory) throws SQLException {
+    public static void ShowInventory() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -297,7 +297,7 @@ public class Show {
         }
     }
 
-    public static void ShowStaff(String staff) throws SQLException {
+    public static void ShowStaff() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -329,7 +329,7 @@ public class Show {
 
     }
 
-    public static void ShowLanguage(String languaga) throws SQLException {
+    public static void ShowLanguage() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -361,7 +361,7 @@ public class Show {
 
     }
 
-    public static void ShowPayment(String payment) throws SQLException {
+    public static void ShowPayment() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -393,7 +393,7 @@ public class Show {
 
     }
 
-    public static void ShowRental(String rental) throws SQLException {
+    public static void ShowRental() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -425,7 +425,7 @@ public class Show {
 
     }
 
-    public static void ShowStore(String store) throws SQLException {
+    public static void ShowStore() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
