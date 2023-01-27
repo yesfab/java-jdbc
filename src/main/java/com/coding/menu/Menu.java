@@ -1,6 +1,7 @@
 package com.coding.menu;
 import com.coding.modulo.*;
 import com.coding.modulo.Creer;
+import com.coding.modulo.Update;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -115,13 +116,14 @@ public class Menu {
 
                     System.out.println("Entrez le nom de la ville : ");
                     String city = action.nextLine();
-                    System.out.println("Dans quel pays (id) ? ");
+                    System.out.println("Entrez l'id du pays : ");
                     String city_country = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.City(city, Integer.parseInt(city_country));
 
                     break;
-                case 2:
+                case 3:
+
 
                     break;
                 case 5:
@@ -161,13 +163,16 @@ public class Menu {
                     System.out.println("Entrez le nom du pays : ");
                     String pays = action.nextLine();
 
-                    creer.Countries(pays);
+                    Creer.Countries(pays);
 
                     break;
                 case 2:
 
                     break;
                 case 3:
+                    Update update = new Update();
+
+                    Update.UpdateCountries(update);
 
                     break;
                 case 4:
