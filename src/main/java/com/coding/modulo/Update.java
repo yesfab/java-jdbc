@@ -34,7 +34,7 @@ public class Update {
             String country = action.nextLine();
 
 
-            String sql = "UPDATE country SET" + country.split(" ")[0] + " WHERE country_id = " + up_city_country;
+            String sql = "UPDATE country SET country = " + country.split(" ")[0] + " WHERE country_id = " + up_city_country;
 
 
             System.out.println(green + "La modification a été effectuée" + reset);
