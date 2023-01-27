@@ -5,11 +5,16 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 public class Creer {
 
+    static final String green = "\u001B[32m";
+    static final String reset = "\u001B[0m";
 
     public void City(String city, int country_id){
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
+
+
+
 
         System.out.println(city +" "+ country_id);
 
@@ -26,7 +31,7 @@ public class Creer {
 
 
             stmt.executeUpdate(sql);
-            System.out.println("Ville créé");
+            System.out.println(green + "Ville créé" + reset);
 
 
             conn.close();
@@ -51,7 +56,7 @@ public class Creer {
             String sql = "INSERT INTO country (country) " +
                     "VALUES ('" + country + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Pays créé");
+            System.out.println(green + "Pays créé" + reset);
 
 
             conn.close();
@@ -73,10 +78,10 @@ public class Creer {
 
             //Requete d'insertion
 
-            String sql = "INSERT INTO actor (firt_name, last_name)" +
-                    "VALUES ('" + actor_firstname.split(" ")[0] + "', '" + actor_lastname.split(" ")[1] + "')";
+            String sql = "INSERT INTO actor (first_name, last_name)" +
+                    "VALUES ('" + actor_firstname.split(" ")[0] + "', '" + actor_lastname.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Acteur créé");
+            System.out.println(green + "Acteur créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -85,7 +90,7 @@ public class Creer {
     }
 
     public static void Film(String film_title, String film_description, String film_realease_year, String film_rental_duration, String film_length, String film_replacement_cost, String film_rating, String film_special_features){
-
+    //revoir
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -101,7 +106,7 @@ public class Creer {
             String sql = "INSERT INTO film (title, description, release_year, rental_duration, rental_rate, length, replacement_cost, rating, special_features)" +
                     "VALUES ('" + film_title.split(" ")[0] + "', '" + film_description.split(" ")[1] + "')" + film_realease_year.split(" ")[2] + "')" + film_rental_duration.split(" ")[3] + "')" + film_length.split(" ")[4] + "')" + film_replacement_cost.split(" ")[5] + "')" + film_rating.split(" ")[6] + "')" + film_special_features.split(" ")[7] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Film créé");
+            System.out.println(green + "Film créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -124,9 +129,9 @@ public class Creer {
             //Requete d'insertion
 
             String sql = "INSERT INTO film_actor (actor_id, film_id)" +
-                    "VALUES ('" + film_actor_id.split(" ")[0] + "', '" + film_film_id.split(" ")[1] + "')";
+                    "VALUES ('" + film_actor_id.split(" ")[0] + "', '" + film_film_id.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Film_actor créé");
+            System.out.println(green + "Film_actor créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -148,10 +153,10 @@ public class Creer {
 
             //Requete d'insertion
 
-            String sql = "INSERT INTO film (film_id, category_id)" +
-                    "VALUES ('" + film_id_category.split(" ")[0] + "', '" + film_category_id.split(" ")[1] + "')";
+            String sql = "INSERT INTO film_category (film_id, category_id)" +
+                    "VALUES ('" + film_id_category.split(" ")[0] + "', '" + film_category_id.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Film_category créé");
+            System.out.println(green + "Film_category créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -176,7 +181,7 @@ public class Creer {
             String sql = "INSERT INTO customer (store_id, first_name, last_name, email, address_id)" +
                     "VALUES ('" + customer_firstname.split(" ")[0] + "', '" + customer_lastname.split(" ")[1] + "', '" + customer_email.split(" ")[2] + "', '" + customer_address_id.split(" ")[3] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Client créé");
+            System.out.println(green + "Client créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -185,7 +190,7 @@ public class Creer {
     }
 
     public static void Address(String address, String address2, String district, String city_id, String postal_code, String phone){
-
+ //revoir
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -201,7 +206,7 @@ public class Creer {
             String sql = "INSERT INTO address (address, address2, district, city_id, postal_code, phone)" +
                     "VALUES ('" + address.split(" ")[0] + "', '" + address2.split(" ")[1] + "', '" + district.split(" ")[2] + "', '" + city_id.split(" ")[3] + "', '" + postal_code.split(" ")[4] + phone.split(" ")[5] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Adresse créée");
+            System.out.println(green + "Adresse créée" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -226,7 +231,7 @@ public class Creer {
             String sql = "INSERT INTO staff (first_name, last_name, address_id, email, store_id, username, password)" +
                     "VALUES ('" + staff_firstname.split(" ")[0] + "', '" + staff_lastname.split(" ")[1] + "', '" + staff_address_id.split(" ")[2] + "', '" + staff_email.split(" ")[3] + "', '" + staff_store_id.split(" ")[4] + staff_username.split(" ")[5] + staff_password.split(" ")[6] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Membre du staff créé");
+            System.out.println(green + "Membre du staff créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -251,7 +256,7 @@ public class Creer {
             String sql = "INSERT INTO category (name)" +
                     "VALUES ('" + category_name.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Categorie créée");
+            System.out.println(green + "Categorie créée" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -276,7 +281,7 @@ public class Creer {
             String sql = "INSERT INTO language (name)" +
                     "VALUES ('" + language_name.split(" ")[0] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Categorie créée");
+            System.out.println(green + "Categorie créée" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -301,7 +306,7 @@ public class Creer {
             String sql = "INSERT INTO payment (payment_id, customer_id, staff_id, rental_id, amount, payment_date)" +
                     "VALUES ('" + payment_customer_id.split(" ")[0] + "', '" + payment_staff_id.split(" ")[1] + "', '" + payment_rental_id.split(" ")[2] + "', '" + payment_amount.split(" ")[3] + "', '" + payment_date.split(" ")[4] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Paiment créé");
+            System.out.println(green + "Paiment créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -326,7 +331,7 @@ public class Creer {
             String sql = "INSERT INTO rental (rental_date, inventory_id, customer_id, return_date, staff_id)" +
                     "VALUES ('" + rental_date.split(" ")[0] + "', '" + rental_inventory_id.split(" ")[1] + "', '" + rental_customer_id.split(" ")[2] + "', '" + rental_return_date.split(" ")[3] + "', '" + rental_staff_id.split(" ")[4] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Location créée");
+            System.out.println(green + "Location créée" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -351,7 +356,7 @@ public class Creer {
             String sql = "INSERT INTO store (manager_staff_id, address_id)" +
                     "VALUES ('" + store_manager_staff_id.split(" ")[0] + "', '" + store_address_id.split(" ")[1] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Magasin créé");
+            System.out.println(green + "Magasin créé" + reset);
 
             conn.close();
         } catch (Exception e) {
@@ -376,7 +381,7 @@ public class Creer {
             String sql = "INSERT INTO inventory (film_id, store_id)" +
                     "VALUES ('" + inventory_film_id.split(" ")[0] + "', '" + inventory_store_id.split(" ")[1] + "')";
             stmt.executeUpdate(sql);
-            System.out.println("Inventaire créé");
+            System.out.println(green + "Inventaire créé" + reset);
 
             conn.close();
         } catch (Exception e) {

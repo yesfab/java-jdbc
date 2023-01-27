@@ -5,7 +5,8 @@ import java.sql.*;
 public class Show {
 
 
-    public static void ShowCity(String citys) throws SQLException{
+
+    public static void ShowCity(String city) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
@@ -18,11 +19,11 @@ public class Show {
 
             //Requete d'insertion
 
-            ResultSet citys= stmt.executeQuery("SELECT city FROM city");
-            ResultSetMetaData resultMeta = citys.getMetaData();
-            while(citys.next()) {
-                for (int i = 1; i <= resultMeta.getColumnCount(); i++) {
-                    System.out.println(" ville: " + citys.getObject(i).toString());
+            ResultSet ville= stmt.executeQuery("SELECT city FROM city");
+            ResultSetMetaData resultMeta = ville.getMetaData();
+            while(ville.next()){
+                for(int i = 1; i <= resultMeta.getColumnCount(); i++) {
+                    System.out.println("ville: "+ ville.getObject(i).toString());
                 }
             }
 
@@ -31,6 +32,7 @@ public class Show {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
 
@@ -62,33 +64,6 @@ public class Show {
         }
     }
 
-    public static void ShowCity(String city) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/sakila";
-        String username = "root";
-        String password = "";
-
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(url, username, password);
-            //Créer l'objet statement
-            Statement stmt = conn.createStatement();
-
-            //Requete d'insertion
-
-            ResultSet ville= stmt.executeQuery("SELECT city FROM city");
-            ResultSetMetaData resultMeta = ville.getMetaData();
-            while(ville.next()){
-                for(int i = 1; i <= resultMeta.getColumnCount(); i++) {
-                    System.out.println("ville: "+ ville.getObject(i).toString());
-                }
-            }
-
-
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     public static void ShowActor(String actor) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";

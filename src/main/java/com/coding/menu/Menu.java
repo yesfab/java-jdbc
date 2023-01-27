@@ -15,6 +15,7 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
+
         while (!exit) {
             System.out.println("Menu principal : ");
             System.out.println("1. Villes");
@@ -119,7 +120,7 @@ public class Menu {
                     System.out.println("Entrez le nom de la ville : ");
                     String city = action.nextLine();
                     System.out.println("Dans quel pays (id) ? ");
-                    String city_country = action.nextLine();
+                    String city_country = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.City(city, Integer.parseInt(city_country));
 
@@ -128,6 +129,12 @@ public class Menu {
                     Show show = new Show();
                     String Spays = action.nextLine();
                     show.ShowCity(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -230,6 +237,12 @@ public class Menu {
                     String Spays = action.nextLine();
                     show.ShowActor(Spays);
                     break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
                 case 5:
                     exit = true;
                     break;
@@ -274,17 +287,17 @@ public class Menu {
                     String film_title = action.nextLine();
                     System.out.println("Entrez la description du film : ");
                     String film_description = action.nextLine();
-                    System.out.println("Entrez l'année du film' : ");
-                    String film_realease_year = action.nextLine();
-                    System.out.println("Entrez la durée de la location du film' : ");
-                    String film_rental_duration = action.nextLine();
-                    System.out.println("Entrez la durée de la location du film' : ");
-                    String film_length = action.nextLine();
-                    System.out.println("Entrez la durée de la location du film' : ");
+                    System.out.println("Entrez l'année du film : ");
+                    String film_realease_year = String.valueOf(Integer.parseInt(action.nextLine()));
+                    System.out.println("Entrez la durée de la location du film : ");
+                    String film_rental_duration = String.valueOf(Integer.parseInt(action.nextLine()));
+                    System.out.println("Entrez la durée du film : ");
+                    String film_length = String.valueOf(Integer.parseInt(action.nextLine()));
+                    System.out.println("Entrez le cout de remplacement du film : ");
                     String film_replacement_cost = action.nextLine();
-                    System.out.println("Entrez la durée de la location du film' : ");
-                    String film_rating = action.nextLine();
-                    System.out.println("Entrez la durée de la location du film' : ");
+                    System.out.println("Entrez la note du film : ");
+                    String film_rating = String.valueOf(Integer.parseInt(action.nextLine()));
+                    System.out.println("Entrez la special feature du film : ");
                     String film_special_features = action.nextLine();
 
                     creer.Film(film_title,film_description,film_realease_year,film_rental_duration,film_length,film_replacement_cost,film_rating,film_special_features);
@@ -295,6 +308,12 @@ public class Menu {
                     Show show = new Show();
                     String Spays = action.nextLine();
                     show.ShowFilm(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -339,11 +358,11 @@ public class Menu {
                     System.out.println("Entrez le district : ");
                     String district = action.nextLine();
                     System.out.println("Entrez l'id de la ville : ");
-                    String city_id = action.nextLine();
+                    String city_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez le code postal de l'adresse : ");
-                    String postal_code = action.nextLine();
+                    String postal_code = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez le numéro de téléphone de l'adresse : ");
-                    String phone = action.nextLine();
+                    String phone = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Address(address, address2, district, city_id, postal_code, phone);
 
@@ -353,6 +372,12 @@ public class Menu {
 
                     String Spays = action.nextLine();
                     show.ShowAddress(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -400,6 +425,12 @@ public class Menu {
                     String Spays = action.nextLine();
                     show.ShowCategorie(Spays);
                     break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
 
                 case 5:
                     exit = true;
@@ -440,7 +471,7 @@ public class Menu {
                     System.out.println("Entrez l'email du client : ");
                     String customer_email = action.nextLine();
                     System.out.println("Entrez l'id de l'adresse du client : ");
-                    String customer_address_id = action.nextLine();
+                    String customer_address_id = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Customers(customer_firstname, customer_lastname, customer_email, customer_address_id);
 
@@ -449,6 +480,12 @@ public class Menu {
                     Show show = new Show();
                     String Spays = action.nextLine();
                     show.ShowCustomer(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -487,9 +524,9 @@ public class Menu {
                     Creer creer = new Creer();
 
                     System.out.println("Entrez l'id de l'acteur : ");
-                    String film_actor_id = action.nextLine();
+                    String film_actor_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du film : ");
-                    String film_film_id = action.nextLine();
+                    String film_film_id = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Film_actor(film_actor_id, film_film_id);
 
@@ -498,6 +535,12 @@ public class Menu {
                     Show show = new Show();
                     String Spays = action.nextLine();
                     show.ShowFilms_actor(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -534,9 +577,9 @@ public class Menu {
                     Creer creer = new Creer();
 
                     System.out.println("Entrez l'id de l'acteur : ");
-                    String film_id_category = action.nextLine();
+                    String film_id_category = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du film : ");
-                    String film_category_id = action.nextLine();
+                    String film_category_id = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Film_category(film_id_category, film_category_id);
 
@@ -545,6 +588,12 @@ public class Menu {
                     Show show = new Show();
                     String Spays = action.nextLine();
                     show.ShowFilms_category(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -580,9 +629,9 @@ public class Menu {
                     Creer creer = new Creer();
 
                     System.out.println("Entrez l'id du film dans l'inventaire : ");
-                    String inventory_film_id = action.nextLine();
+                    String inventory_film_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du magasin où se trouve l'inventaire : ");
-                    String inventory_store_id = action.nextLine();
+                    String inventory_store_id = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Inventory(inventory_film_id, inventory_store_id);
 
@@ -591,6 +640,12 @@ public class Menu {
                     Show show = new Show();
                     String Spays = action.nextLine();
                     show.ShowInventory(Spays);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
                     break;
 
                 case 5:
@@ -627,19 +682,19 @@ public class Menu {
                 case 1:
                     Creer creer = new Creer();
 
-                    System.out.println("Entrez l'id de l'acteur : ");
+                    System.out.println("Entrez le prénom du membre du staff : ");
                     String staff_firstname = action.nextLine();
-                    System.out.println("Entrez l'id du film : ");
+                    System.out.println("Entrez le nom du membre du staff : ");
                     String staff_lastname = action.nextLine();
-                    System.out.println("Entrez l'id du film : ");
-                    String staff_address_id = action.nextLine();
-                    System.out.println("Entrez l'id du film : ");
+                    System.out.println("Entrez l'id de l'adresse du membre du staff: ");
+                    String staff_address_id = String.valueOf(Integer.parseInt(action.nextLine()));
+                    System.out.println("Entrez l'email du membre du staff : ");
                     String staff_email = action.nextLine();
-                    System.out.println("Entrez l'id du film : ");
-                    String staff_store_id = action.nextLine();
-                    System.out.println("Entrez l'id du film : ");
+                    System.out.println("Entrez l'id du magasin du membre du staff : ");
+                    String staff_store_id = String.valueOf(Integer.parseInt(action.nextLine()));
+                    System.out.println("Entrez le pseudo du membre du staff : ");
                     String staff_username = action.nextLine();
-                    System.out.println("Entrez l'id du film : ");
+                    System.out.println("Entrez le mot de passe du membre du staff : ");
                     String staff_password = action.nextLine();
 
                     creer.Staff(staff_firstname, staff_lastname, staff_address_id, staff_email, staff_store_id, staff_username, staff_password);
@@ -743,15 +798,15 @@ public class Menu {
                     Creer creer = new Creer();
 
                     System.out.println("Entrez l'id du client du paiement' : ");
-                    String payment_customer_id = action.nextLine();
+                    String payment_customer_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du staff qui a géré le paiement : ");
-                    String payment_staff_id = action.nextLine();
+                    String payment_staff_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id de la location correspondant au paiement : ");
-                    String payment_rental_id = action.nextLine();
+                    String payment_rental_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez le montant du paiement : ");
-                    String payment_amount = action.nextLine();
+                    String payment_amount = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez la date du paiement : ");
-                    String payment_date = action.nextLine();
+                    String payment_date = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Payment(payment_customer_id, payment_staff_id, payment_rental_id, payment_amount, payment_date);
 
@@ -802,15 +857,15 @@ public class Menu {
                     Creer creer = new Creer();
 
                     System.out.println("Entrez la date de la location : ");
-                    String rental_date = action.nextLine();
+                    String rental_date = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id de l'inventaire de la location : ");
-                    String rental_inventory_id = action.nextLine();
+                    String rental_inventory_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du client correspondant à la location : ");
-                    String rental_customer_id = action.nextLine();
+                    String rental_customer_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez la date de retour de la location : ");
-                    String rental_return_date = action.nextLine();
+                    String rental_return_date = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id du staff qui a géré la location : ");
-                    String rental_staff_id = action.nextLine();
+                    String rental_staff_id = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Rental(rental_date, rental_inventory_id, rental_customer_id, rental_return_date, rental_staff_id);
 
@@ -861,9 +916,9 @@ public class Menu {
                     Creer creer = new Creer();
 
                     System.out.println("Entrez l'id du manager du staff du magasin : ");
-                    String store_manager_staff_id = action.nextLine();
+                    String store_manager_staff_id = String.valueOf(Integer.parseInt(action.nextLine()));
                     System.out.println("Entrez l'id de l'adresse du magasin : ");
-                    String store_address_id = action.nextLine();
+                    String store_address_id = String.valueOf(Integer.parseInt(action.nextLine()));
 
                     creer.Store(store_manager_staff_id, store_address_id);
 
