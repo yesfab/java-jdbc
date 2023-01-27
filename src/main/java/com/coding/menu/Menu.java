@@ -19,6 +19,20 @@ public class Menu {
             System.out.println("");
             System.out.println("Menu principal : ");
             System.out.println("");
+            System.out.println("" + "|\\   \\\\\\\\__     o\n" +
+                    "| \\_/    o \\    o\n" +
+                    "> _   (( <_  oo\n" +
+                    "| / \\__+___/\n" +
+                    "|/     |/");
+
+            System.out.println(" .\n" +
+                    "      \":\"\n" +
+                    "    ___:____     |\"\\/\"|\n" +
+                    "  ,'        `.    \\  /\n" +
+                    "  |  O        \\___/  |\n" +
+                    "~^~^~^~^~^~^~^~^~^~^~^~^~");
+
+            System.out.println("");
             System.out.println("1. Villes");
             System.out.println("2. Pays");
             System.out.println("3. Acteurs");
@@ -34,6 +48,7 @@ public class Menu {
             System.out.println("13. Location");
             System.out.println("14. Magasin");
             System.out.println("15. Inventaire");
+            System.out.println("16. Quitter");
 
             System.out.print("Entre ton choix : ");
 
