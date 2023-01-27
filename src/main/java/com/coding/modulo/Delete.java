@@ -26,7 +26,6 @@ public class Delete {
             stmt.executeUpdate(sql);
             System.out.println("Pays supprimé");
 
-
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();
