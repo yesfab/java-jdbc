@@ -180,6 +180,9 @@ public class Menu {
                     break;
 
                 case 3:
+                    Update update = new Update();
+                    Update.UpdateCountries(update);
+
                     break;
 
                 case 4:
